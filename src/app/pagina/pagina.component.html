@@ -1,0 +1,29 @@
+<!--
+  // TODO: criar o layout como no diagrama
+  // TODO: adicionar o link de navegação à sidebar
+  // TODO: exibir a resposta da data-hora consultada na api
+  // TODO: adicionar um input e um botão à página
+  // TODO: criar um método POST no api.service que envie o texto do input e exiba a resposta na página
+-->
+<div class="container">
+  <div class="div-titulo">
+    <h1 class="titulo">Título da página</h1>
+  </div>
+  <div class="navegacao">
+    <p class="titulo-side">Sidebar</p>
+    <a class="link" routerLink="/start">Start</a>
+  </div>
+  <div class="conteudo">
+    <p>{{apiGreeting}}</p>
+    <p><strong>Data: </strong>{{dataHora}} <strong>Hora: </strong>{{dataHora}}</p>
+  <form (ngSubmit)="submit()" [formGroup]="textForm" #formDir="ngForm">
+    <input formControlName="text" class="input" type="text">
+    <div *ngIf="text.invalid && formDir.submitted" class="erro">
+      <p>É necessário digitar o texto</p>
+    </div>
+    <br>
+    <input class="btn" type="submit" value="Enviar">
+  </form>
+    <p>Mostar API texto</p>
+  </div>
+</div>
