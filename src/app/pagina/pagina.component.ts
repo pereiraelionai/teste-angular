@@ -50,7 +50,7 @@ export class PaginaComponent implements OnInit {
       })
     ).subscribe((response) => {
       if (response) {
-        this.dataHora = response;
+        this.dataHora = response.data_hora;
       }
     });   
   }
