@@ -22,7 +22,6 @@ export class ApiService {
   }
 
   public getTexto(formData): Observable<FormData> {
-    console.log(environment.apiHost + '/texto/', formData);
     return this.http.post<FormData>(environment.apiHost + '/texto/', formData)
   }
 

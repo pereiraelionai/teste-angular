@@ -15,7 +15,7 @@
   </div>
   <div class="conteudo">
     <p>{{apiGreeting}}</p>
-    <p><strong>Data: </strong>{{dataHora}} <strong>Hora: </strong>{{dataHora}}</p>
+    <p><strong>Data: </strong>{{dataHora.data}} <strong>Hora: </strong>{{dataHora.hora}}</p>
   <form (ngSubmit)="submit()" [formGroup]="textForm" #formDir="ngForm">
     <input formControlName="text" class="input" type="text">
     <div *ngIf="text.invalid && formDir.submitted" class="erro">
